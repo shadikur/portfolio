@@ -6,6 +6,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import { ThemeProvider } from "@material-tailwind/react";
 
 const routes = createBrowserRouter(
   [
@@ -19,6 +20,8 @@ const routes = createBrowserRouter(
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <RouterProvider router={routes}>
-    <App />
+    <ThemeProvider>
+      <App />
+    </ThemeProvider>
   </RouterProvider>,
 )

@@ -14,9 +14,13 @@ const PreLoader = ({ children }) => {
                 loaded ? <>
                     {children}
                 </> :
-                    <>
-                        loading ....
-                    </>
+                    <div className="preloader-container">
+                        <h1>Mohammad Shadikur</h1>
+                        <div id="progress-line-container">
+                            <div className="progress-line" />
+                        </div>
+                        <h1>Rahman</h1>
+                    </div>
             }
         </div>
     );

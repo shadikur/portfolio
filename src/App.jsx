@@ -6,6 +6,7 @@ import About from './components/About/About';
 import Contact from './components/Contact/Contact';
 import Portfolio from './components/Portfolio/Portfolio';
 import PreLoader from './components/PreLoader/PreLoader';
+import './App.css';
 
 const App = () => {
     return (
