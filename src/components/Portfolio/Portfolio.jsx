@@ -1,10 +1,12 @@
 import React from 'react';
+import CustomTitle from '../../hooks/CustomTitle';
 
 const Portfolio = () => {
     return (
-        <div>
+        <section id='projects'>
+            <CustomTitle title={`My Projects`} subtitle={`You will find all my recent projects that I have worked.`}></CustomTitle>
 
-        </div>
+        </section>
     );
 };
 

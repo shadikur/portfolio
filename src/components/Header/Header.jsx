@@ -1,19 +1,24 @@
 import { Link } from "react-router-dom";
 import {
     Navbar,
-    MobileNav,
     Typography,
-    Button,
     IconButton,
-    Card,
+    Collapse,
 } from "@material-tailwind/react";
 
 import Logo from "../Logo/Logo";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const Header = () => {
 
     const [openNav, setOpenNav] = useState(false);
+
+    const ref = useRef(null);
+
+    const handleClick = () => {
+        ref.current?.scrollIntoView({ behavior: 'smooth' });
+        console.log(ref);
+    };
 
     useEffect(() => {
         window.addEventListener(
@@ -50,7 +55,17 @@ const Header = () => {
                 color="blue-gray"
                 className="p-1 font-normal"
             >
-                <Link to={`#projects`} className="flex items-center">
+                <Link onClick={handleClick} className="flex items-center">
+                    Skills
+                </Link>
+            </Typography>
+            <Typography
+                as="li"
+                variant="small"
+                color="blue-gray"
+                className="p-1 font-normal"
+            >
+                <Link to={`/#projects`} className="flex items-center">
                     Projects
                 </Link>
             </Typography>
@@ -60,7 +75,7 @@ const Header = () => {
                 color="blue-gray"
                 className="p-1 font-normal"
             >
-                <Link to={`#contact`} className="flex items-center">
+                <Link to={`/#contact`} className="flex items-center">
                     Contact
                 </Link>
             </Typography>
@@ -114,9 +129,9 @@ const Header = () => {
                         </IconButton>
                     </div>
                 </div>
-                <MobileNav open={openNav}>
+                <Collapse open={openNav}>
                     {navList}
-                </MobileNav>
+                </Collapse>
             </Navbar>
         </>
     );

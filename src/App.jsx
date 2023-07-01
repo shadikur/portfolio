@@ -7,6 +7,7 @@ import Contact from './components/Contact/Contact';
 import Portfolio from './components/Portfolio/Portfolio';
 import PreLoader from './components/PreLoader/PreLoader';
 import './App.css';
+import Skills from './components/Skills/Skills';
 
 const App = () => {
     return (
@@ -15,6 +16,7 @@ const App = () => {
                 <Header></Header>
                 <Banner></Banner>
                 <About></About>
+                <Skills></Skills>
                 <Portfolio></Portfolio>
                 <Contact></Contact>
                 <Footer></Footer>
