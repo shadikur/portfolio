@@ -5,16 +5,19 @@ import Banner from './components/Banner/Banner';
 import About from './components/About/About';
 import Contact from './components/Contact/Contact';
 import Portfolio from './components/Portfolio/Portfolio';
+import PreLoader from './components/PreLoader/PreLoader';
 
 const App = () => {
     return (
         <>
-            <Header></Header>
-            <Banner></Banner>
-            <About></About>
-            <Portfolio></Portfolio>
-            <Contact></Contact>
-            <Footer></Footer>
+            <PreLoader>
+                <Header></Header>
+                <Banner></Banner>
+                <About></About>
+                <Portfolio></Portfolio>
+                <Contact></Contact>
+                <Footer></Footer>
+            </PreLoader>
         </>
     );
 };
