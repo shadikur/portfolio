@@ -4,5 +4,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+      args:
+        - BUILD_DATE=${BUILD_DATE}
+        - CACHEBUST=${RANDOM}
     ports:
       - "3000"
