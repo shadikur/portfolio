@@ -1,7 +1,20 @@
 import { Button } from '@material-tailwind/react';
 import React from 'react';
+import TextTransition, { presets } from 'react-text-transition';
+
+const TEXTS = ['Shadikur', 'Forest', 'Building', 'Tree', 'Color'];
 
 const Banner = () => {
+    const [index, setIndex] = React.useState(0);
+
+    React.useEffect(() => {
+        const intervalId = setInterval(
+            () => setIndex((index) => index + 1),
+            3000, // every 3 seconds
+        );
+        return () => clearTimeout(intervalId);
+    }, []);
+
     return (
         <section className="pt-10 overflow-hidden bg-gray-200 md:pt-0 sm:pt-16 2xl:pt-16 shadow">
             <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
@@ -10,7 +23,7 @@ const Banner = () => {
                         <h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">
                             Hey 👋
                             <br />
-                            I am Shadikur
+                            I am <TextTransition springConfig={presets.wobbly}>{TEXTS[index % TEXTS.length]}</TextTransition>
                         </h2>
                         <p className="max-w-lg mt-3 text-xl leading-relaxed text-gray-600 md:mt-8">
                             I am a Full Stack Developer having skills on multiple technologies. I have completed my bachelor degree in Mechatronics System Engineering and a core of Aerospace Engineering. I am very passioniate about technologies
@@ -20,9 +33,9 @@ const Banner = () => {
                                 <Button variant="outlined" >
                                     Explore
                                 </Button>
-                                <Button variant="contained" >
+                                <a href='./resume/Resume_MSRahman.pdf' download={true}>
                                     Resume
-                                </Button>
+                                </a>
                             </span>
                         </p>
                     </div>

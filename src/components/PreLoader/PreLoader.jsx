@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Spinner, Typography } from "@material-tailwind/react";
 import "./PreLoader.css"
+import { Dna } from 'react-loader-spinner';
 
 const PreLoader = ({ children }) => {
     const [loaded, setLoaded] = useState(false);
@@ -17,9 +18,16 @@ const PreLoader = ({ children }) => {
                     {children}
                 </> :
                     <div className="loader">
-                        <Spinner color="purple" className='h-11 w-11' />
+                        <Dna
+                            visible={true}
+                            height="80"
+                            width="80"
+                            ariaLabel="dna-loading"
+                            wrapperStyle={{}}
+                            wrapperClass="dna-wrapper"
+                        />
                         <Typography variant="lead">
-                            Welcome to my portfolio. Give me a sec to load up...
+                            One moment please ...
                         </Typography>
                     </div>
             }

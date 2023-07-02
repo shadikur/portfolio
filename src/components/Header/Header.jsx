@@ -45,9 +45,9 @@ const Header = () => {
                 color="blue-gray"
                 className="p-1 font-normal"
             >
-                <Link to={`#about`} className="flex items-center">
+                <a href={`#about`} className="flex items-center">
                     About
-                </Link>
+                </a>
             </Typography>
             <Typography
                 as="li"
@@ -55,9 +55,9 @@ const Header = () => {
                 color="blue-gray"
                 className="p-1 font-normal"
             >
-                <Link onClick={handleClick} className="flex items-center">
+                <a href="#skills" className="flex items-center">
                     Skills
-                </Link>
+                </a>
             </Typography>
             <Typography
                 as="li"
@@ -65,9 +65,9 @@ const Header = () => {
                 color="blue-gray"
                 className="p-1 font-normal"
             >
-                <Link to={`/#projects`} className="flex items-center">
+                <a href={`/#projects`} className="flex items-center">
                     Projects
-                </Link>
+                </a>
             </Typography>
             <Typography
                 as="li"
@@ -75,9 +75,9 @@ const Header = () => {
                 color="blue-gray"
                 className="p-1 font-normal"
             >
-                <Link to={`/#contact`} className="flex items-center">
+                <a href={`/#contact`} className="flex items-center">
                     Contact
-                </Link>
+                </a>
             </Typography>
         </ul>
     );
@@ -85,7 +85,7 @@ const Header = () => {
 
     return (
         <>
-            <Navbar className="sticky top z-10 h-max max-w-full rounded-none py-2 px-4 lg:px-8 lg:py-4">
+            <Navbar className="sticky inset-0 z-10 h-max max-w-full rounded-none py-2 px-4 lg:px-8 lg:py-4">
                 <div className="flex items-center justify-between text-blue-gray-900">
                     <Logo />
                     <div className="flex items-center gap-4">
