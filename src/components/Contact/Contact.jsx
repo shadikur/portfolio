@@ -5,7 +5,7 @@ import { Button, Input, Textarea, Typography } from '@material-tailwind/react';
 const Contact = () => {
     return (
         <div className='bg-gray-200' id='contact'>
-            <CustomTitle title={`Contact me`} subtitle={`Would like to get in touch? Simply fill out the form below and shoot me a message`}></CustomTitle>
+            <CustomTitle title={`Contact Me`} subtitle={`Would like to get in touch? Simply fill out the form below and shoot me a message`}></CustomTitle>
             <section className='pb-20'>
                 <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
                     <div className="max-w-5xl mx-auto mt-12 sm:mt-16">

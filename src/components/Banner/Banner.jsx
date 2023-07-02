@@ -1,8 +1,9 @@
 import { Button } from '@material-tailwind/react';
 import React from 'react';
 import TextTransition, { presets } from 'react-text-transition';
+import { FaCloudDownloadAlt } from 'react-icons/fa';
 
-const TEXTS = ['Shadikur', 'Forest', 'Building', 'Tree', 'Color'];
+const TEXTS = ['Shadikur', 'an Engineer', 'a Fullstack Developer', 'a DevOps Engineer', 'a System Admin'];
 
 const Banner = () => {
     const [index, setIndex] = React.useState(0);
@@ -26,17 +27,16 @@ const Banner = () => {
                             I am <TextTransition springConfig={presets.wobbly}>{TEXTS[index % TEXTS.length]}</TextTransition>
                         </h2>
                         <p className="max-w-lg mt-3 text-xl leading-relaxed text-gray-600 md:mt-8">
-                            I am a Full Stack Developer having skills on multiple technologies. I have completed my bachelor degree in Mechatronics System Engineering and a core of Aerospace Engineering. I am very passioniate about technologies
+                            I am a Full Stack Developer with expertise in multiple technologies. My educational background includes a bachelors degree in Mechatronics System Engineering and a strong foundation in Aerospace Engineering. I am deeply passionate about technology and always eager to learn and explore new advancements.
                         </p>
-                        <p className="mt-4 text-xl text-gray-600 md:mt-8">
-                            <span className="relative inline-block space-x-3">
+                        <p className="mt-4 text-xl text-gray-600 md:mt-8 flex space-x-2">
+                            <a href='#about'>
                                 <Button variant="outlined" >
-                                    Explore
-                                </Button>
-                                <a href='./resume/Resume_MSRahman.pdf' download={true}>
-                                    Resume
-                                </a>
-                            </span>
+                                    More
+                                </Button></a>
+                            <a href='./resume/Resume_MSRahman.pdf' className='btn-primary' download={true}>
+                                <Button className='flex items-center'><FaCloudDownloadAlt className='mr-1'></FaCloudDownloadAlt> Resume</Button>
+                            </a>
                         </p>
                     </div>
                     <div className="relative">
