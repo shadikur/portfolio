@@ -3,7 +3,7 @@ import React from 'react';
 import TextTransition, { presets } from 'react-text-transition';
 import { FaCloudDownloadAlt } from 'react-icons/fa';
 
-const TEXTS = ['Shadikur', 'an Engineer', 'a Fullstack Developer', 'a DevOps Engineer', 'a System Admin'];
+const TEXTS = ['Shadikur', 'an Engineer', 'a Fullstack Developer', 'a DevOps Engineer', 'a System Administrator', 'an Automation Engineer'];
 
 const Banner = () => {
     const [index, setIndex] = React.useState(0);
