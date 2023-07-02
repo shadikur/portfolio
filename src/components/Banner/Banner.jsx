@@ -13,7 +13,7 @@ const Banner = () => {
                             I am Shadikur
                         </h2>
                         <p className="max-w-lg mt-3 text-xl leading-relaxed text-gray-600 md:mt-8">
-                            I am a Full Stack Developer having skills on multiple technologies. I have completed my bachelor degree in Mechatronics System Engineering and a core of Aerospace Engineering.
+                            I am a Full Stack Developer having skills on multiple technologies. I have completed my bachelor degree in Mechatronics System Engineering and a core of Aerospace Engineering. I am very passioniate about technologies
                         </p>
                         <p className="mt-4 text-xl text-gray-600 md:mt-8">
                             <span className="relative inline-block space-x-3">
