@@ -7,103 +7,145 @@ import {
     CardFooter,
     Typography,
     Button,
-    Tooltip,
     IconButton,
+    Chip,
 } from "@material-tailwind/react";
-import {
-    BanknotesIcon,
-    StarIcon,
-    HeartIcon,
-    WifiIcon,
-    HomeIcon,
-    TvIcon,
-    FireIcon,
-} from "@heroicons/react/24/solid";
+
+import { SiGithub } from 'react-icons/si';
+
+const projects = [
+    {
+        name: "Creative Expressions Summer Camp School",
+        description: "Comprehensive courses and tutorials on drawing, painting, crafts, sculpture, and more",
+        screenShot: "./projects/creativeexpression-bed43.web.app_.png",
+        technologies: [
+            "React",
+            "MongoDB",
+            "Firebase",
+            "Express JS API",
+            "Node JS",
+            "JWT",
+            "MUI"
+        ],
+        links: [
+            {
+                frontEnd: "https://github.com/front",
+                backEnd: "https://github.com/front",
+                liveSite: "https://creativeexpression-bed43.web.app/"
+            }
+        ]
+    },
+    {
+        name: "Robot Toy Marketplace Toy listing website",
+        description: "Explore a wide range of robot toys available for purchase",
+        screenShot: "./projects/creativeexpression-bed43.web.app_.png",
+        technologies: [
+            "React",
+            "MongoDB",
+            "Express JS",
+            "Node JS",
+            "JWT",
+            "Firebase",
+            "TailwindCSS"
+        ],
+        links: [
+            {
+                frontEnd: "https://github.com/front",
+                backEnd: "https://github.com/front",
+                liveSite: "https://toyclient.web.app/"
+            }
+        ]
+    },
+    {
+        name: "Thai Chef A place with most popular chef",
+        description: "'Thai Chef', including its menu, location, hours of operation, and contact information",
+        screenShot: "./projects/creativeexpression-bed43.web.app_.png",
+        technologies: [
+            "React",
+            "MongoDB",
+            "Express JS",
+            "Node JS",
+            "DaisyUI",
+            "TailwindCSS",
+            "Firebase"
+        ],
+        links: [
+            {
+                frontEnd: "https://github.com/front",
+                backEnd: "https://github.com/front",
+                liveSite: "https://thai-chef-e1bc4.web.app/"
+            }
+        ]
+    }
+]
 
 const Portfolio = () => {
     return (
-        <section id='projects'>
+        <section id='projects' className='pb-10'>
             <CustomTitle title={`My Projects`} subtitle={`You will find all my recent projects that I have worked.`}></CustomTitle>
-            <div className="cards container mx-auto">
-                <Card className="w-full max-w-[26rem] shadow-lg">
-                    <CardHeader floated={false} color="blue-gray">
-                        <div className="relative max-w-full h-72 overflow-hidden rounded-lg">
-                            <div className="h-max w-full transition-transform duration-[5000ms] ease-linear transform translate-y-0 hover:-translate-y-[calc(100%-18rem)] rounded-lg">
-                                <img
-                                    src="./projects/creativeexpression-bed43.web.app_.png"
-                                    alt=""
-                                    className="w-full object-cover object-top rounded-lg"
-                                />
-                            </div>
-                        </div>
-                        <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-tr from-transparent via-transparent to-black/60 " />
-                        <IconButton
-                            size="sm"
-                            color="red"
-                            variant="text"
-                            className="!absolute top-4 right-4 rounded-full"
-                        >
-                            <HeartIcon className="h-6 w-6" />
-                        </IconButton>
-                    </CardHeader>
-                    <CardBody>
-                        <div className="mb-3 flex items-center justify-between">
-                            <Typography variant="h5" color="blue-gray" className="font-medium">
-                                Wooden House, Florida
-                            </Typography>
-                            <Typography
-                                color="blue-gray"
-                                className="flex items-center gap-1.5 font-normal"
-                            >
-                                <StarIcon className="-mt-0.5 h-5 w-5 text-yellow-700" />
-                                5.0
-                            </Typography>
-                        </div>
-                        <Typography color="gray">
-                            Enter a freshly updated and thoughtfully furnished peaceful home
-                            surrounded by ancient trees, stone walls, and open meadows.
-                        </Typography>
-                        <div className="group mt-8 inline-flex flex-wrap items-center gap-3">
-                            <Tooltip content="$129 per night">
-                                <span className="cursor-pointer rounded-full border border-blue-500/5 bg-blue-500/5 p-3 text-blue-500 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
-                                    <BanknotesIcon className="h-5 w-5" />
-                                </span>
-                            </Tooltip>
-                            <Tooltip content="Free wifi">
-                                <span className="cursor-pointer rounded-full border border-blue-500/5 bg-blue-500/5 p-3 text-blue-500 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
-                                    <WifiIcon className="h-5 w-5" />
-                                </span>
-                            </Tooltip>
-                            <Tooltip content="2 bedrooms">
-                                <span className="cursor-pointer rounded-full border border-blue-500/5 bg-blue-500/5 p-3 text-blue-500 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
-                                    <HomeIcon className="h-5 w-5" />
-                                </span>
-                            </Tooltip>
-                            <Tooltip content={`65" HDTV`}>
-                                <span className="cursor-pointer rounded-full border border-blue-500/5 bg-blue-500/5 p-3 text-blue-500 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
-                                    <TvIcon className="h-5 w-5" />
-                                </span>
-                            </Tooltip>
-                            <Tooltip content="Fire alert">
-                                <span className="cursor-pointer rounded-full border border-blue-500/5 bg-blue-500/5 p-3 text-blue-500 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
-                                    <FireIcon className="h-5 w-5" />
-                                </span>
-                            </Tooltip>
-                            <Tooltip content="And +20 more">
-                                <span className="cursor-pointer rounded-full border border-blue-500/5 bg-blue-500/5 p-3 text-blue-500 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
-                                    +20
-                                </span>
-                            </Tooltip>
-                        </div>
-                    </CardBody>
-                    <CardFooter className="pt-3">
-                        <a href='https://creativeexpression-bed43.web.app/' rel='noreferrer' target='_blank'>
-                            <Button size="lg" fullWidth={true}>
-                                Preview Site
-                            </Button>
-                        </a>
-                    </CardFooter>
-                </Card>
+            <div className="cards container mx-auto grid grid-cols-1 md:grid-cols-3">
+                {
+                    projects.map((project, index) =>
+                        <Card key={index} className="w-full max-w-[26rem] shadow-lg">
+                            <CardHeader floated={false} color="blue-gray">
+                                <div className="relative max-w-full h-72 overflow-hidden rounded-lg">
+                                    <div className="h-max w-full transition-transform duration-[5000ms] ease-linear transform translate-y-0 hover:-translate-y-[calc(100%-18rem)] rounded-lg">
+                                        <img
+                                            src={project.screenShot}
+                                            alt=""
+                                            className="w-full object-cover object-top rounded-lg"
+                                        />
+                                    </div>
+                                </div>
+                                <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-tr from-transparent via-transparent to-black/60 " />
+                            </CardHeader>
+                            <CardBody>
+                                <div className="mb-3 flex items-center justify-between">
+                                    <Typography variant="h5" color="blue-gray" className="font-medium">
+                                        {project.name}
+                                    </Typography>
+                                    <Typography
+                                        color="blue-gray"
+                                        className="flex items-center gap-1.5 font-normal"
+                                    >
+                                        {
+                                            project.links.map((link, index) =>
+                                                <a key={index} href={link.frontEnd} rel='noreferrer' target='_blank'>
+                                                    <IconButton className="bg-[#333333] rounded hover:shadow-[#333333]/20 focus:shadow-[#333333]/20 active:shadow-[#333333]/10">
+                                                        <SiGithub className='text-lg'></SiGithub>
+                                                    </IconButton>
+                                                </a>)
+                                        }
+
+                                    </Typography>
+                                </div>
+                                <Typography color="gray">
+                                    {
+                                        project.description
+                                    }
+                                </Typography>
+                                <div className="group mt-8 inline-flex flex-wrap items-center gap-3">
+                                    {
+                                        project.technologies.map((tech, index) =>
+                                            <Chip key={index} variant="outlined" value={tech} />
+                                        )
+                                    }
+                                </div>
+                            </CardBody>
+                            <CardFooter className="pt-3">
+                                {
+                                    project.links.map((link, index) =>
+                                        <a href={link.liveSite} key={index} rel='noreferrer' target='_blank'>
+                                            <Button size="lg" fullWidth={true}>
+                                                Live Site
+                                            </Button>
+                                        </a>
+                                    )
+                                }
+
+                            </CardFooter>
+                        </Card>)
+                }
             </div>
 
         </section>
