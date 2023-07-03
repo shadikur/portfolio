@@ -91,7 +91,7 @@ const Contact = () => {
                                 <Typography className="text-3xl font-semibold text-center text-gray-900">
                                     Send me a message
                                 </Typography>
-                                <form action="#" method="POST" className="mt-14">
+                                <form className="mt-14">
                                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-5 gap-y-4">
                                         <div>
                                             <div className="mt-2.5 relative">

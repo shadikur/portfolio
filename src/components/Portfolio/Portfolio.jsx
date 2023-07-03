@@ -64,7 +64,6 @@ const projects = [
             "React",
             "MongoDB",
             "Express JS",
-            "Node JS",
             "DaisyUI",
             "TailwindCSS",
             "Firebase"
