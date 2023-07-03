@@ -17,7 +17,7 @@ const projects = [
     {
         name: "Creative Expressions Summer Camp School",
         description: "Comprehensive courses and tutorials on drawing, painting, crafts, sculpture, and more",
-        screenShot: "./projects/creativeexpression-bed43.web.app_.png",
+        screenShot: "https://res.cloudinary.com/ddez9nchs/image/upload/v1688341344/shadikur/FireShot_Capture_008_-_Creative_Expressions_-_A_place_to_share_your_creative_expressions__-_creativeexpression-bed43.web.app.png",
         technologies: [
             "React",
             "MongoDB",
@@ -38,7 +38,7 @@ const projects = [
     {
         name: "Robot Toy Marketplace Toy listing website",
         description: "Explore a wide range of robot toys available for purchase",
-        screenShot: "./projects/creativeexpression-bed43.web.app_.png",
+        screenShot: "https://res.cloudinary.com/ddez9nchs/image/upload/v1688341343/shadikur/FireShot_Capture_010_-_Robo_Toy_-_Home_-_The_best_robot_toys_marketplace_in_the_world__-_toyclient.web.app.png",
         technologies: [
             "React",
             "MongoDB",
@@ -59,7 +59,7 @@ const projects = [
     {
         name: "Thai Chef A place with most popular chef",
         description: "'Thai Chef', including its menu, location, hours of operation, and contact information",
-        screenShot: "./projects/creativeexpression-bed43.web.app_.png",
+        screenShot: "https://res.cloudinary.com/ddez9nchs/image/upload/v1688341333/shadikur/FireShot_Capture_011_-_Thai_Chef_-_The_taste_of_Thailand_-_thai-chef-e1bc4.web.app.png",
         technologies: [
             "React",
             "MongoDB",
@@ -97,7 +97,6 @@ const Portfolio = () => {
                                         />
                                     </div>
                                 </div>
-                                <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-tr from-transparent via-transparent to-black/60 " />
                             </CardHeader>
                             <CardBody>
                                 <div className="mb-3 flex items-center justify-between">
