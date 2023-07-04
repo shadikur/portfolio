@@ -1,7 +1,5 @@
 import React from 'react';
 import { Typography } from "@material-tailwind/react";
-import { Link } from 'react-router-dom';
-import Logo from '../Logo/Logo';
 import { SiGithub, SiLinkedin, SiTwitter } from 'react-icons/si';
 
 

@@ -29,8 +29,8 @@ const projects = [
         ],
         links: [
             {
-                frontEnd: "https://github.com/front",
-                backEnd: "https://github.com/front",
+                frontEnd: "https://github.com/shadikur/creativeExpression",
+                backEnd: "https://github.com/shadikur/creativeExpressionServer",
                 liveSite: "https://creativeexpression-bed43.web.app/"
             }
         ]
@@ -50,8 +50,8 @@ const projects = [
         ],
         links: [
             {
-                frontEnd: "https://github.com/front",
-                backEnd: "https://github.com/front",
+                frontEnd: "https://github.com/shadikur/toyclient",
+                backEnd: "https://github.com/shadikur/toyserver",
                 liveSite: "https://toyclient.web.app/"
             }
         ]
@@ -70,8 +70,8 @@ const projects = [
         ],
         links: [
             {
-                frontEnd: "https://github.com/front",
-                backEnd: "https://github.com/front",
+                frontEnd: "https://github.com/shadikur/chefClient",
+                backEnd: "https://github.com/shadikur/chefServer",
                 liveSite: "https://thai-chef-e1bc4.web.app/"
             }
         ]
