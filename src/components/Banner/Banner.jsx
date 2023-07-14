@@ -3,7 +3,7 @@ import React from 'react';
 import TextTransition, { presets } from 'react-text-transition';
 import { FaCloudDownloadAlt } from 'react-icons/fa';
 
-const TEXTS = ['Shadikur', 'an Engineer', 'a Fullstack Developer', 'a DevOps Engineer', 'a System Administrator', 'an Automation Engineer'];
+const TEXTS = ['Shadikur', 'an Engineer', 'a Fullstack Engineer', 'a DevOps Engineer', 'a System Administrator', 'an Automation Engineer'];
 
 const Banner = () => {
     const [index, setIndex] = React.useState(0);
@@ -27,7 +27,7 @@ const Banner = () => {
                             I am <TextTransition springConfig={presets.wobbly}>{TEXTS[index % TEXTS.length]}</TextTransition>
                         </h2>
                         <p className="max-w-lg mt-3 text-xl leading-relaxed text-gray-600 md:mt-8">
-                            I am a Full Stack Developer with expertise in multiple technologies. My educational background includes a bachelors degree in Mechatronics System Engineering and a strong foundation in Aerospace Engineering. I am deeply passionate about technology and always eager to learn and explore new advancements.
+                            I am a Full Stack Engineer with expertise in multiple technologies. My educational background includes a bachelors degree in Mechatronics System Engineering and a strong foundation in Aerospace Engineering. I am deeply passionate about technology and always eager to learn and explore new advancements.
                         </p>
                         <p className="mt-4 text-xl text-gray-600 md:mt-8 flex space-x-2">
                             <a href='#about'>
