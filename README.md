@@ -11,7 +11,12 @@ Welcome to my personal portfolio website! This website showcases my work and pro
 - React Text Transition
 - Material Tailwind React
 - Sort By
-- LocalForage
+- LocalStorage
+- React Icons
+- Tailwind CSS & Forms
+- React hook form
+- Sweet Alert 2
+- Express JS Backend
 
 ## Getting Started
 

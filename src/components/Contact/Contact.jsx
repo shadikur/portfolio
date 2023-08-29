@@ -6,6 +6,7 @@ import Swal from 'sweetalert2';
 
 const Contact = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
+    const [ipAddress, setIpAddress] = React.useState('');
 
     const onSubmit = (data) => {
         console.log(data);
@@ -14,7 +15,10 @@ const Contact = () => {
             const data = await response.json();
             return data.ip;
         }
-        console.log(ipAddressOfVisitor());
+
+        ipAddressOfVisitor().then(ip => {
+            setIpAddress(ip);
+        });
 
         Swal.fire({
             title: 'Are you sure?',
@@ -26,12 +30,28 @@ const Contact = () => {
             confirmButtonText: 'Yes, send it!'
         }).then((result) => {
             if (result.isConfirmed) {
-
-                Swal.fire(
-                    'Sent!',
-                    'Your message has been sent to Shadikur',
-                    'success'
-                )
+                fetch('https://contact.shadikur.com', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ ...data, ipAddress })
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        Swal.fire(
+                            'Sent!',
+                            'Your message has been sent to Shadikur',
+                            'success'
+                        )
+                    })
+                    .catch(err => {
+                        Swal.fire(
+                            'Opps!',
+                            'Something went wrong! Please try again later',
+                            'error'
+                        )
+                    })
             }
         })
     };
