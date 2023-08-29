@@ -15,7 +15,7 @@ import { MdWorkHistory } from 'react-icons/md';
 
 const About = () => {
     return (
-        <section id='about' className='mb-5'>
+        <section id='about' className='mb-5' data-aos="fade-up-left">
             <CustomTitle title="About Me" subtitle="A brief description about me" />
             <Card className='container p-10 mx-auto text-center shadow-xl mb-7 bg-gray-200'>
                 <Typography>
@@ -28,7 +28,7 @@ const About = () => {
                 </Typography>
             </Card>
             <div className='grid grid-cols-1 md:grid-cols-2 justify-items-center container mx-auto'>
-                <div className="experience">
+                <div className="experience" data-aos="fade-up-right">
                     <Typography className="text-2xl mb-5 text-center">
                         Work Experience
                     </Typography>
@@ -90,7 +90,7 @@ const About = () => {
                         </Timeline>
                     </div>
                 </div>
-                <div className="education">
+                <div className="education" data-aos="fade-up-left">
                     <Typography className="text-2xl mb-5 text-center">
                         Education
                     </Typography>

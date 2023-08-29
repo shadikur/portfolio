@@ -8,6 +8,12 @@ import Portfolio from './components/Portfolio/Portfolio';
 import PreLoader from './components/PreLoader/PreLoader';
 import './App.css';
 import Skills from './components/Skills/Skills';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init({
+    duration: 2000,
+    once: true
+});
 
 const App = () => {
     return (

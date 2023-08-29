@@ -62,7 +62,7 @@ const Contact = () => {
             <section className='pb-20'>
                 <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
                     <div className="max-w-5xl mx-auto mt-12 sm:mt-16">
-                        <div className="grid grid-cols-1 gap-6 px-8 text-center md:px-0 md:grid-cols-3">
+                        <div className="grid grid-cols-1 gap-6 px-8 text-center md:px-0 md:grid-cols-3" data-aos="flip-left">
                             <div className="overflow-hidden bg-white rounded-xl">
                                 <div className="p-6">
                                     <svg

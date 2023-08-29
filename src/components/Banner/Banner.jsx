@@ -19,14 +19,17 @@ const Banner = () => {
     return (
         <section className="pt-10 overflow-hidden bg-gray-200 md:pt-0 sm:pt-16 2xl:pt-16 shadow" id="top">
             <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
-                <div className="grid items-center grid-cols-1 md:grid-cols-2">
+                <div className="grid items-center grid-cols-1 md:grid-cols-2"
+                    data-aos="zoom-in-up"
+                >
                     <div>
                         <h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">
                             Hey 👋
                             <br />
                             I am <TextTransition springConfig={presets.wobbly}>{TEXTS[index % TEXTS.length]}</TextTransition>
                         </h2>
-                        <p className="max-w-lg mt-3 text-xl leading-relaxed text-gray-600 md:mt-8">
+                        <p
+                            className="max-w-lg mt-3 text-xl leading-relaxed text-gray-600 md:mt-8">
                             I am a Full Stack Engineer with expertise in multiple technologies. My educational background includes a bachelors degree in Mechatronics System Engineering and a strong foundation in Aerospace Engineering. I am deeply passionate about technology and always eager to learn and explore new advancements.
                         </p>
                         <p className="mt-4 text-xl text-gray-600 md:mt-8 flex space-x-2">
@@ -39,7 +42,9 @@ const Banner = () => {
                             </a>
                         </p>
                     </div>
-                    <div className="relative">
+                    <div className="relative"
+                        data-aos="zoom-in-up"
+                    >
                         <img
                             className="absolute inset-x-0 bottom-0 -mb-48 -translate-x-1/2 left-1/2"
                             src="https://cdn.rareblocks.xyz/collection/celebration/images/team/1/blob-shape.svg"

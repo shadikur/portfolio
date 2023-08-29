@@ -202,7 +202,7 @@ const Skills = () => {
         <div className='bg-gray-200 pb-10' id='skills'>
             <CustomTitle title={`My Top Skills`} subtitle={`Technology, I am experienced with`}></CustomTitle>
             <div className="skill-group container mx-auto grid grid-cols-1 md:grid-cols-3 gap-3 justify-items-center">
-                <div className="keyskills grid grid-cols-2 md:grid-cols-3 gap-3">
+                <div className="keyskills grid grid-cols-2 md:grid-cols-3 gap-3" data-aos="zoom-in-up">
                     {skills.map((skill, index) =>
                         <Card key={index} className='items-center justify-center p-5 h-32 bg-gradient-to-b from-gray-900 to-gray-600 bg-gradient-to-r text-white'>
                             {skill.icon}
@@ -212,7 +212,7 @@ const Skills = () => {
                         </Card>
                     )}
                 </div>
-                <div className="programming-languages grid grid-cols-2 md:grid-cols-3 gap-3">
+                <div className="programming-languages grid grid-cols-2 md:grid-cols-3 gap-3" data-aos="zoom-in-up">
                     {languages.map((language, index) =>
                         <Card key={index} className='items-center justify-center p-5 h-32 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-900 to-indigo-500 text-white'>
                             {language.icon}
@@ -222,7 +222,7 @@ const Skills = () => {
                         </Card>
                     )}
                 </div>
-                <div className="tools grid grid-cols-2 md:grid-cols-3 gap-3">
+                <div className="tools grid grid-cols-2 md:grid-cols-3 gap-3" data-aos="zoom-in-up">
                     {tools.map((tool, index) =>
                         <Card key={index} className='items-center justify-center p-5 h-32 bg-gradient-to-b from-gray-900 to-gray-600 bg-gradient-to-r text-white'>
                             {tool.icon}

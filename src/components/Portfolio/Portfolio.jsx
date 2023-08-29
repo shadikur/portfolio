@@ -150,7 +150,7 @@ const Portfolio = () => {
     return (
         <section id='projects' className='pb-10'>
             <CustomTitle title={`My Projects`} subtitle={`You will find all my recent projects that I have worked.`}></CustomTitle>
-            <div className="cards container mx-auto grid grid-cols-1 md:grid-cols-3">
+            <div className="cards container mx-auto grid grid-cols-1 md:grid-cols-3" data-aos="zoom-in-down" >
                 {
                     projects.map((project, index) =>
                         <Card key={index} className="w-full max-w-[26rem] shadow-lg">
