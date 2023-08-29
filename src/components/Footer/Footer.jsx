@@ -9,13 +9,13 @@ const Footer = () => {
     return (
         <footer className="px-4 divide-y bg-gray-800 text-gray-100">
             <div className="container grid grid-cols-1 md:grid-cols-3 items-center justify-items-center py-10 mx-auto">
-                <a rel="noopener noreferrer" href="https://www.linkedin.com/in/shadikur/" title="LinkedIn" className="flex items-center p-1">
+                <a rel="noopener noreferrer" href="https://www.linkedin.com/in/shadikur/" title="LinkedIn" className="flex items-center p-1 gap-2">
                     <SiLinkedin></SiLinkedin> <Typography>LinkedIn</Typography>
                 </a>
-                <a rel="noopener noreferrer" href="https://twitter.com/Shadikur" title="Twitter" className="flex items-center p-1">
+                <a rel="noopener noreferrer" href="https://twitter.com/Shadikur" title="Twitter" className="flex items-center p-1 gap-2">
                     <SiTwitter></SiTwitter> <Typography>Twitter</Typography>
                 </a>
-                <a rel="noopener noreferrer" href="https://github.com/shadikur" title="Github" className="flex items-center p-1">
+                <a rel="noopener noreferrer" href="https://github.com/shadikur" title="Github" className="flex items-center p-1  gap-2">
                     <SiGithub></SiGithub> <Typography>GitHub</Typography>
                 </a>
             </div>

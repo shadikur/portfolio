@@ -1,8 +1,41 @@
 import React from 'react';
 import CustomTitle from '../../hooks/CustomTitle';
 import { Button, Input, Textarea, Typography } from '@material-tailwind/react';
+import { useForm } from "react-hook-form"
+import Swal from 'sweetalert2';
 
 const Contact = () => {
+    const { register, handleSubmit, formState: { errors } } = useForm();
+
+    const onSubmit = (data) => {
+        console.log(data);
+        const ipAddressOfVisitor = async () => {
+            const response = await fetch('https://api.ipify.org/?format=json');
+            const data = await response.json();
+            return data.ip;
+        }
+        console.log(ipAddressOfVisitor());
+
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You are about to send a message to Shadikur and your IP is being tracked! In case of any spamming, you will be blocked and reported to the authority!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+
+                Swal.fire(
+                    'Sent!',
+                    'Your message has been sent to Shadikur',
+                    'success'
+                )
+            }
+        })
+    };
+
     return (
         <div className='bg-gray-200' id='contact'>
             <CustomTitle title={`Contact Me`} subtitle={`Would like to get in touch? Simply fill out the form below and shoot me a message`}></CustomTitle>
@@ -91,17 +124,18 @@ const Contact = () => {
                                 <Typography className="text-3xl font-semibold text-center text-gray-900">
                                     Send me a message
                                 </Typography>
-                                <form className="mt-14">
+                                <form className="mt-14" onSubmit={handleSubmit(onSubmit)}>
                                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-5 gap-y-4">
                                         <div>
                                             <div className="mt-2.5 relative">
                                                 <Input
                                                     type="text"
-                                                    name=""
-                                                    id=""
-                                                    label="Enter your full name"
-                                                    className="block w-full px-4 py-4 text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:border-blue-600 caret-blue-600"
+                                                    name="name"
+                                                    id="name"
+                                                    label="Enter your name"
+                                                    {...register("name", { required: true })}
                                                 />
+                                                {errors.name && <span className='text-deep-orange-900'>This field is required</span>}
                                             </div>
                                         </div>
                                         <div>
@@ -112,7 +146,9 @@ const Contact = () => {
                                                     id=""
                                                     label='Enter your email address'
                                                     className="block w-full px-4 py-4 text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:border-blue-600 caret-blue-600"
+                                                    {...register("email", { required: true, pattern: /^\S+@\S+$/i })}
                                                 />
+                                                {errors.email && <span className='text-deep-orange-900'>This field is required</span>}
                                             </div>
                                         </div>
                                         <div>
@@ -123,7 +159,9 @@ const Contact = () => {
                                                     id=""
                                                     label="Enter your phone number"
                                                     className="block w-full px-4 py-4 text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:border-blue-600 caret-blue-600"
+                                                    {...register("phone", { required: true, minLength: 6, maxLength: 15, pattern: /^[0-9]+$/i })}
                                                 />
+                                                {errors.phone && <span className='text-deep-orange-900'>This field is required</span>}
                                             </div>
                                         </div>
                                         <div>
@@ -134,7 +172,9 @@ const Contact = () => {
                                                     id=""
                                                     label="Subject to your message"
                                                     className="block w-full px-4 py-4 text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:border-blue-600 caret-blue-600"
+                                                    {...register("subject", { required: true, minLength: 6, maxLength: 60 })}
                                                 />
+                                                {errors.subject && <span className='text-deep-orange-900'>This field is required</span>}
                                             </div>
                                         </div>
                                         <div className="sm:col-span-2">
@@ -146,7 +186,9 @@ const Contact = () => {
                                                     className="block w-full px-4 py-4 text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md resize-y focus:outline-none focus:border-blue-600 caret-blue-600"
                                                     rows={4}
                                                     defaultValue={""}
+                                                    {...register("message", { required: true, minLength: 10, maxLength: 1000 })}
                                                 />
+                                                {errors.message && <span className='text-deep-orange-900'>This field is required</span>}
                                             </div>
                                         </div>
                                         <div className="sm:col-span-2">

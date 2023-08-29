@@ -1,7 +1,7 @@
 import React from 'react';
 import CustomTitle from '../../hooks/CustomTitle';
-import { FaCss3, FaHtml5, FaJava } from 'react-icons/fa';
-import { SiAmazonaws, SiApache, SiAzuredevops, SiBootstrap, SiC, SiCplusplus, SiCss3, SiCucumber, SiDaisyui, SiDigitalocean, SiDocker, SiEclipseche, SiEclipsejetty, SiExpress, SiFirebase, SiGit, SiGooglechrome, SiGooglecloud, SiHtml5, SiIntellijidea, SiJavascript, SiJenkins, SiJson, SiJsonwebtokens, SiLinux, SiMongodb, SiMysql, SiNextdotjs, SiNginx, SiNodedotjs, SiPhp, SiPostgresql, SiPostman, SiPowershell, SiPython, SiReact, SiSelenium, SiShell, SiSwift, SiTailwindcss, SiUikit, SiVisualstudiocode, SiXaml } from 'react-icons/si';
+import { FaCss3, FaHtml5, FaJava, FaMarsStrokeH } from 'react-icons/fa';
+import { SiAmazonaws, SiApache, SiAzuredevops, SiBootstrap, SiC, SiCplusplus, SiCss3, SiCucumber, SiDaisyui, SiDigitalocean, SiDocker, SiEclipseche, SiEclipsejetty, SiExpress, SiFirebase, SiGit, SiGooglechrome, SiGooglecloud, SiHtml5, SiIntellijidea, SiJavascript, SiJenkins, SiJquery, SiJson, SiJsonwebtokens, SiLinux, SiMongodb, SiMysql, SiNextdotjs, SiNginx, SiNodedotjs, SiPhp, SiPostgresql, SiPostman, SiPowershell, SiPython, SiReact, SiSelenium, SiShell, SiSwift, SiTailwindcss, SiUikit, SiVisualstudiocode, SiXaml } from 'react-icons/si';
 import { Card, CardBody, CardHeader } from '@material-tailwind/react';
 import { Typography } from '@material-tailwind/react';
 
@@ -58,6 +58,10 @@ const skills = [
     {
         name: "JWT Auth",
         icon: <SiJsonwebtokens className='h-10 w-10' />,
+    },
+    {
+        name: "JQuery",
+        icon: <SiJquery className='h-10 w-10' />,
     },
     {
         name: "MongoDB",
@@ -122,6 +126,10 @@ const languages = [
         name: "Python",
         icon: <SiPython className='h-10 w-10' />,
     },
+    {
+        name: "Matlab",
+        icon: <FaMarsStrokeH className='h-10 w-10' />,
+    }
 ]
 
 const tools = [

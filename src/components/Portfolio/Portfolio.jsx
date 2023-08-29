@@ -75,7 +75,75 @@ const projects = [
                 liveSite: "https://thai-chef-e1bc4.web.app/"
             }
         ]
-    }
+    },
+    {
+        name: "FusionPBX Automation",
+        description: "FusionPBX is an open-source GUI for freeSWITCH. It is a multi-tenant SIP PBX and telephony platform.",
+        screenShot: "https://res.cloudinary.com/ddez9nchs/image/upload/v1693297025/shadikur/office.pbx.shadikur.com_core_dashboard_.png",
+        technologies: [
+            "Freeswitch",
+            "FusionPBX",
+            "PHP",
+            "PostgreSQL",
+            "JavaScript",
+            "Azure API",
+            "Azure Functions"
+        ],
+        links: [
+            {
+                frontEnd: "https://github.com/shadikur/fusionpbx",
+                backEnd: "",
+                liveSite: "https://office.pbx.shadikur.com/"
+            }
+        ]
+    },
+    {
+        name: "Proxmox Virtualisation Installer",
+        description: "Proxmox Virtual Environment is an open-source server virtualization management platform",
+        screenShot: "https://res.cloudinary.com/ddez9nchs/image/upload/v1693297557/shadikur/192.168.1.200_8006_.png",
+        technologies: [
+            "Proxmox",
+            "Shell",
+            "Debian",
+            "PHP",
+            "Linux",
+            "Bash Scripting",
+            "Virtualisation",
+            "Networking"
+        ],
+        links: [
+            {
+                frontEnd: "https://github.com/shadikur/proxmox/tree/master",
+                backEnd: "",
+                liveSite: ""
+            }
+        ],
+    },
+    {
+        name: "Microsoft Teams & OpenSIPs Integration",
+        description: "Developed a custom Microsoft Teams SBC using OpenSIPs and RTPProxy",
+        screenShot: "https://res.cloudinary.com/ddez9nchs/image/upload/v1693297921/shadikur/tWf0In8gXE.png",
+        technologies: [
+            "OpenSIPs",
+            "RTPProxy",
+            "Microsoft Teams",
+            "SBC",
+            "Linux",
+            "Bash Scripting",
+            "Virtualisation",
+            "Networking"
+        ],
+        links: [
+            {
+                frontEnd: "https://github.com/shadikur/opensips",
+                backEnd: "",
+                liveSite: ""
+            }
+        ],
+
+    },
+
+
 ]
 
 const Portfolio = () => {
@@ -135,7 +203,7 @@ const Portfolio = () => {
                                     project.links.map((link, index) =>
                                         <a href={link.liveSite} key={index} rel='noreferrer' target='_blank'>
                                             <Button size="lg" fullWidth={true}>
-                                                Live Site
+                                                {link.liveSite ? 'Live Site' : 'Private'}
                                             </Button>
                                         </a>
                                     )
