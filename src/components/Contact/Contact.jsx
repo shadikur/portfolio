@@ -6,7 +6,7 @@ import Swal from 'sweetalert2';
 import axios from 'axios';
 
 const Contact = () => {
-    const { register, handleSubmit, formState: { errors } } = useForm();
+    const { register, handleSubmit, formState: { errors }, reset } = useForm();
     const [ipAddress, setIpAddress] = React.useState('');
 
     const onSubmit = (data) => {
@@ -39,6 +39,7 @@ const Contact = () => {
                     ipAddress: ipAddress
                 })
                     .then(function (response) {
+                        reset();
                         Swal.fire(
                             'Sent!',
                             'Your message has been sent successfully!',
