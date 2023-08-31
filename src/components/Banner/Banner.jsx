@@ -2,11 +2,14 @@ import { Button } from '@material-tailwind/react';
 import React from 'react';
 import TextTransition, { presets } from 'react-text-transition';
 import { FaCloudDownloadAlt } from 'react-icons/fa';
+import Swal from 'sweetalert2';
+import axios from 'axios';
 
 const TEXTS = ['Shadikur', 'an Engineer', 'a Fullstack Engineer', 'a DevOps Engineer', 'a System Administrator', 'an Automation Engineer'];
 
 const Banner = () => {
     const [index, setIndex] = React.useState(0);
+    const [ipAddress, setIpAddress] = React.useState('');
 
     React.useEffect(() => {
         const intervalId = setInterval(
@@ -15,6 +18,37 @@ const Banner = () => {
         );
         return () => clearTimeout(intervalId);
     }, []);
+
+    const ipAddressOfVisitor = async () => {
+        const response = await fetch('https://api.ipify.org/?format=json');
+        const data = await response.json();
+        return data.ip;
+    }
+
+    ipAddressOfVisitor().then(ip => {
+        setIpAddress(ip);
+    });
+
+    const handleRequestResume = async () => {
+        const { value: email } = await Swal.fire({
+            title: 'Enter your email address',
+            input: 'email',
+            inputLabel: 'I need your email address to send you my resume 😊',
+            inputPlaceholder: 'Enter your email address',
+            confirmButtonText: 'Rquest Resume',
+        })
+
+        if (email) {
+            axios.post(`${import.meta.env.VITE_API_URL}/resume`, {
+                email: email,
+                ipAddress: ipAddress
+            }).then(res => {
+                Swal.fire(`Your request has been sent successfully.`)
+            }).catch(err => {
+                Swal.fire(`${err.response.data}`)
+            })
+        }
+    }
 
     return (
         <section className="pt-10 overflow-hidden bg-gray-200 md:pt-0 sm:pt-16 2xl:pt-16 shadow" id="top">
@@ -37,9 +71,8 @@ const Banner = () => {
                                 <Button variant="outlined" >
                                     More
                                 </Button></a>
-                            <a href='./resume/Resume_MSRahman.pdf' className='btn-primary' download={true}>
-                                <Button className='flex items-center'><FaCloudDownloadAlt className='mr-1'></FaCloudDownloadAlt> Resume</Button>
-                            </a>
+
+                            <Button className='flex items-center' onClick={handleRequestResume}><FaCloudDownloadAlt className='mr-1'></FaCloudDownloadAlt>Request Resume</Button>
                         </p>
                     </div>
                     <div className="relative"

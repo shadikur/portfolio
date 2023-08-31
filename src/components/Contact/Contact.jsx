@@ -3,13 +3,13 @@ import CustomTitle from '../../hooks/CustomTitle';
 import { Button, Input, Textarea, Typography } from '@material-tailwind/react';
 import { useForm } from "react-hook-form"
 import Swal from 'sweetalert2';
+import axios from 'axios';
 
 const Contact = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
     const [ipAddress, setIpAddress] = React.useState('');
 
     const onSubmit = (data) => {
-        console.log(data);
         const ipAddressOfVisitor = async () => {
             const response = await fetch('https://api.ipify.org/?format=json');
             const data = await response.json();
@@ -30,28 +30,29 @@ const Contact = () => {
             confirmButtonText: 'Yes, send it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch('https://contact.shadikur.com', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({ ...data, ipAddress })
+                axios.post(`${import.meta.env.VITE_API_URL}/send`, {
+                    name: data.name,
+                    email: data.email,
+                    phone: data.phone,
+                    subject: data.subject,
+                    message: data.message,
+                    ipAddress: ipAddress
                 })
-                    .then(res => res.json())
-                    .then(data => {
+                    .then(function (response) {
                         Swal.fire(
                             'Sent!',
-                            'Your message has been sent to Shadikur',
+                            'Your message has been sent successfully!',
                             'success'
                         )
                     })
-                    .catch(err => {
+                    .catch(function (error) {
                         Swal.fire(
-                            'Opps!',
-                            'Something went wrong! Please try again later',
+                            'Error!',
+                            error.response.data,
                             'error'
                         )
-                    })
+                    }
+                    );
             }
         })
     };
