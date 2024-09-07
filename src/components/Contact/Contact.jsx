@@ -136,7 +136,7 @@ const Contact = () => {
                                         />
                                     </svg>
                                     <Typography className="mt-6 text-lg font-medium leading-relaxed text-gray-900">
-                                        Brühl, Nord-Rhein-Westphalia, Germany
+                                        Hmaburg, Hamburg, Germany
                                     </Typography>
                                 </div>
                             </div>

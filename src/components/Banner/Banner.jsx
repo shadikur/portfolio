@@ -5,7 +5,7 @@ import { FaCloudDownloadAlt } from 'react-icons/fa';
 import Swal from 'sweetalert2';
 import axios from 'axios';
 
-const TEXTS = ['Shadikur', 'an Engineer', 'a Fullstack Engineer', 'a DevOps Engineer', 'a System Administrator', 'an Automation Engineer'];
+const TEXTS = ['Shadikur', 'a Fullstack Engineer', 'expert in DevOps', 'expert in Automation', 'expert in Telecom'];
 
 const Banner = () => {
     const [index, setIndex] = React.useState(0);
@@ -85,7 +85,7 @@ const Banner = () => {
                         />
                         <img
                             className="relative w-full xl:max-w-lg xl:mx-auto 2xl:origin-bottom 2xl:scale-110"
-                            src="https://res.cloudinary.com/ddez9nchs/image/upload/v1688208533/shadikur/IMG_9324-removebg-preview.png"
+                            src="https://res.cloudinary.com/ddez9nchs/image/upload/v1725744513/shadikur/Square_ME-removebg-preview.png"
                             alt=""
                         />
                     </div>
