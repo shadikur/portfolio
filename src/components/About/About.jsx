@@ -19,12 +19,7 @@ const About = () => {
             <CustomTitle title="About Me" subtitle="A brief description about me" />
             <Card className='container p-10 mx-auto text-center shadow-xl mb-7 bg-gray-200'>
                 <Typography>
-                    Experienced IT professional with a strong focus on full stack web development. Over 10 years of successful project management in IT
-                    modernization and system integration, combined with expertise in bridging the gap between business and technology. Skilled in
-                    delivering high-quality web solutions that address diverse business needs and drive positive outcomes. Proficient in MERN (MongoDB,
-                    Express.js, React.js, Node.js) stack development, with a comprehensive understanding of front-end and back-end technologies.
-                    Collaborative and adaptable, with a passion for continuous learning and staying updated with industry trends. Excels at designing and
-                    implementing innovative web applications that meet client requirements and exceed expectations.
+                    Experienced IT professional specializing in full stack web and mobile development, with over 10 years of successful project management in IT modernization and system integration. Expert in bridging the gap between business and technology, delivering tailored solutions that address complex business needs and drive positive results. Proficient in the MERN stack (MongoDB, Express.js, React.js, Node.js) and React Native for mobile application development, ensuring a seamless experience across both web and mobile platforms. Collaborative, adaptable, and committed to continuous learning, with a strong focus on designing and implementing innovative solutions that exceed client expectations.
                 </Typography>
             </Card>
             <div className='grid grid-cols-1 md:grid-cols-2 justify-items-center container mx-auto'>

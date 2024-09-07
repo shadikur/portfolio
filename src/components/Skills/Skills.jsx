@@ -204,7 +204,7 @@ const Skills = () => {
             <div className="skill-group container mx-auto grid grid-cols-1 md:grid-cols-3 gap-3 justify-items-center">
                 <div className="keyskills grid grid-cols-2 md:grid-cols-3 gap-3" data-aos="zoom-in-up">
                     {skills.map((skill, index) =>
-                        <Card key={index} className='items-center justify-center p-5 h-32 bg-gradient-to-b from-gray-900 to-gray-600 bg-gradient-to-r text-white'>
+                        <Card key={index} className='items-center justify-center p-5 h-32 bg-gradient-to-b from-gray-900 to-gray-600  text-white'>
                             {skill.icon}
                             <Typography>
                                 {skill.name}
@@ -224,7 +224,7 @@ const Skills = () => {
                 </div>
                 <div className="tools grid grid-cols-2 md:grid-cols-3 gap-3" data-aos="zoom-in-up">
                     {tools.map((tool, index) =>
-                        <Card key={index} className='items-center justify-center p-5 h-32 bg-gradient-to-b from-gray-900 to-gray-600 bg-gradient-to-r text-white'>
+                        <Card key={index} className='items-center justify-center p-5 h-32 bg-gradient-to-b from-gray-900 to-gray-600  text-white'>
                             {tool.icon}
                             <Typography>
                                 {tool.name}
