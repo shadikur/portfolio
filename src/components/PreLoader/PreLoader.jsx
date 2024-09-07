@@ -1,15 +1,20 @@
 import React, { useEffect, useState } from 'react';
-import { Spinner, Typography } from "@material-tailwind/react";
+import { Progress, Typography } from "@material-tailwind/react";
 import "./PreLoader.css"
-import { Dna } from 'react-loader-spinner';
 
 const PreLoader = ({ children }) => {
     const [loaded, setLoaded] = useState(false);
+    const [counter, setCounter] = useState(0);
+
     useEffect(() => {
+        for (let i = 0; i <= 100; i++) {
+            setCounter(i);
+        }
         setTimeout(() => {
             setLoaded(true);
-        }, 1000);
-    });
+        }, 100);
+    }, []);
+
 
     return (
         <div>
@@ -17,18 +22,10 @@ const PreLoader = ({ children }) => {
                 loaded ? <>
                     {children}
                 </> :
-                    <div className="loader">
-                        <Dna
-                            visible={true}
-                            height="80"
-                            width="80"
-                            ariaLabel="dna-loading"
-                            wrapperStyle={{}}
-                            wrapperClass="dna-wrapper"
-                        />
-                        <Typography variant="lead">
-                            One moment please ...
-                        </Typography>
+                    <div className='w-full h-screen flex flex-col justify-center items-center align-middle'>
+                        <div className="w-[50vw] mx-auto">
+                            <Progress value={counter} size="md" label="loaded" />
+                        </div>
                     </div>
             }
         </div>
