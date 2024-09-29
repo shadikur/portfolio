@@ -12,14 +12,16 @@ import {
 
 import { FaBookReader } from 'react-icons/fa';
 import { MdWorkHistory } from 'react-icons/md';
+import ReactGA from "react-ga4";
 
 const About = () => {
+    ReactGA.initialize('YOUR_TRACKING_ID');
     return (
         <section id='about' className='mb-5' data-aos="fade-up-left">
             <CustomTitle title="About Me" subtitle="A brief description about me" />
             <Card className='container p-10 mx-auto text-center shadow-xl mb-7 bg-gray-200'>
                 <Typography>
-                    Experienced IT professional specializing in full stack web and mobile development, with over 10 years of successful project management in IT modernization and system integration. Expert in bridging the gap between business and technology, delivering tailored solutions that address complex business needs and drive positive results. Proficient in the MERN stack (MongoDB, Express.js, React.js, Node.js) and React Native for mobile application development, ensuring a seamless experience across both web and mobile platforms. Collaborative, adaptable, and committed to continuous learning, with a strong focus on designing and implementing innovative solutions that exceed client expectations.
+                    A seasoned Full Stack Engineer with over 10 years of experience successfully managing IT modernization and system integration projects. Known for bridging the gap between business and technology, I excel at developing innovative IT solutions that solve business problems and deliver measurable results. Skilled in designing and implementing scalable web applications using modern frameworks such as React.js and Laravel, with expertise in both front-end and back-end technologies. I possess excellent interpersonal skills and thrive in collaborative team environments. Highly adaptable, I am constantly learning and staying ahead of industry trends to drive success.
                 </Typography>
             </Card>
             <div className='grid grid-cols-1 md:grid-cols-2 justify-items-center container mx-auto'>
